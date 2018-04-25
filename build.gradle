@@ -6,6 +6,7 @@ version = '1.0'
 jar {
     manifest {
         attributes 'Implementation-Title': 'Graph Pathfinder',
-                'Implementation-Version': version
+                'Implementation-Version': version,
+                'Main-Class': 'net.zetlan.PathFinder'
     }
 }
