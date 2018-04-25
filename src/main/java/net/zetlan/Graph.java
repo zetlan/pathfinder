@@ -68,10 +68,6 @@ public class Graph {
                     candidatePath.add(node);
                 }
                 candidatePath.add(candidate);
-                System.out.println(String.format(
-                        "    Candidate path: %s",
-                        String.join(":", candidatePath.stream().map(x -> x.getName()).collect(Collectors.toList()))
-                ));
                 candidatePaths.add(getPath(candidate.getName(), toNodeName, candidatePath));
             }
 
