@@ -57,8 +57,10 @@ public class Graph {
         }
         if (startNode.getNextNodes().containsKey(toNodeName)) {
             // We found it! Add it and return.
-            currentPath.add(startNode.getNextNodes().get(toNodeName));
-            return currentPath;
+            List<Node> path = new ArrayList<>();
+            path.addAll(currentPath);
+            path.add(getNodeList().get(toNodeName));
+            return path;
         } else {
             List<List<Node>> candidatePaths = new ArrayList<>();
 
